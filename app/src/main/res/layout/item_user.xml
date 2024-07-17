@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView  xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_margin="6dp">
+
+
+        <!--    <ImageView-->
+        <!--        android:id="@+id/userPhoto"-->
+        <!--        android:layout_width="60dp"-->
+        <!--        android:layout_height="60dp"-->
+        <!--        android:scaleType="centerCrop"-->
+        <!--        android:layout_marginEnd="8dp"/>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Circular ImageView -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/userPhoto"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_launcher_foreground"
+                app:shapeAppearance="@style/CircularImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Edit icon overlay -->
+            <ImageView
+                android:id="@+id/editIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/edit_icon"
+                android:padding="2dp"
+                android:background="@drawable/circular_bg"
+                android:src="@android:drawable/ic_menu_edit"
+                android:layout_marginEnd="-5dp"
+                app:layout_constraintBottom_toBottomOf="@id/userPhoto"
+                app:layout_constraintEnd_toEndOf="@id/userPhoto" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/userEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="114dp"
+                android:backgroundTint="@color/delete"
+                android:textColor="@color/white"
+                app:iconTint="@color/white"
+                app:icon="@android:drawable/ic_menu_delete"
+                android:text="Delete"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="114dp"
+                android:backgroundTint="@color/edit"
+                android:textColor="@color/white"
+                app:iconTint="@color/white"
+                app:icon="@android:drawable/ic_menu_edit"
+                android:text="Edit"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

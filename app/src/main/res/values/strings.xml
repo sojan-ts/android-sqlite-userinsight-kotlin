@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">User Insights</string>
+    <string name="age_distribution_graph">Age Distribution Graph</string>
+    <string name="no_users_available">No users available</string>
+    <string name="age_graph">Age graph</string>
+    <string name="add_new">Add New</string>
+    <string name="save">Save</string>
+    <string name="profile_image">Profile Image :</string>
+    <string name="age">Age</string>
+    <string name="other">other</string>
+    <string name="female">female</string>
+    <string name="male">male</string>
+    <string name="gender">Gender :</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="user_details">User Details</string>
+    <string name="profilepic">ProfilePic</string>
+    <string name="edit_icon">Edit Icon</string>
+</resources>
